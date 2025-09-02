@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT PLUS VIP VPN - Unlimited Access</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff8a00, #e52e71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff8a00, #e52e71);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .feature-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 25px;
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-box i {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #fdbb2d;
+        }
+        
+        .feature-box h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .images-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .image-box {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .image-box:hover img {
+            transform: scale(1.05);
+        }
+        
+        .pricing {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .pricing h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        
+        .pricing-plans {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .plan {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+        }
+        
+        .plan h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #fdbb2d;
+        }
+        
+        .plan .price {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .plan ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        
+        .plan ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .social-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+        }
+        
+        .toggle-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff8a00, #e52e71);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .social-links {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .social-links.active {
+            display: flex;
+        }
+        
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 22px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .social-link:hover {
+            transform: scale(1.1);
+        }
+        
+        .telegram {
+            background: #0088cc;
+        }
+        
+        .messenger {
+            background: #006aff;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .pricing {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjZmQ2YzAwIiBkPSJNNDQ4IDk2SDY0QzI4LjcgOTYgMCAxMjQuNyAwIDE2MHYxOTJjMCAzNS4zIDI4LjcgNjQgNjQgNjRoMzg0YzM1LjMgMCA2NC0yOC43IDY0LTY0VjE2MGMwLTM1LjMtMjguNy02NC02NC02NHptLTk2IDIyNGMwIDI2LjUtMjEuNSA0OC00OCA0OHMtNDgtMjEuNS00OC00OHMyMS41LTQ4IDQ4LTQ4IDQ4IDIxLjUgNDggNDh6bTEyMCAwYzAgMTMtMTAgMjMtMjMgMjNoLTQ5Yy0xMyAwLTIzLTEwLTIzLTIzczEwLTIzIDIzLTIzaDQ5YzEzIDAgMjMgMTAgMjMgMjN6bTQ4IDBjMCAzNS4zLTI4LjcgNjQtNjQgNjRzLTY0LTI4LjctNjQtNjRzMjguNy02NCA2NC02NCA2NCAyOC43IDY0IDY0eiIvPjwvc3ZnPg==" alt="YT PLUS VIP VPN Logo">
+                <h1>YT PLUS VIP VPN</h1>
+            </div>
+        </header>
+        
+        <section class="hero">
+            <h2>Unlock Unlimited Content with YT PLUS VIP VPN</h2>
+            <p>Experience blazing fast speeds, unlimited bandwidth, and access to global content with our premium VPN service.</p>
+            <a href="#download" class="btn">Get Started Now</a>
+        </section>
+        
+        <section class="features">
+            <div class="feature-box">
+                <i class="fas fa-rocket"></i>
+                <h3>Lightning Fast</h3>
+                <p>Enjoy buffer-free streaming and gaming with our high-speed servers in 50+ countries.</p>
+            </div>
+            
+            <div class="feature-box">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Military Grade Security</h3>
+                <p>Your data is protected with AES-256 encryption and our strict no-logs policy.</p>
+            </div>
+            
+            <div class="feature-box">
+                <i class="fas fa-globe"></i>
+                <h3>Global Access</h3>
+                <p>Access content from around the world without restrictions or limitations.</p>
+            </div>
+        </section>
+        
+        <section class="images-section">
+            <div class="image-box">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODAgNDgwIiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMjQwIDQ4QzEzNS4xIDQ4IDQ4IDEzNS4xIDQ4IDI0MHM4Ny4xIDE5MiAxOTIgMTkyIDE5Mi04Ny4xIDE5Mi0xOTJTMzQ0LjkgNDggMjQwIDQ4em0xMDAuNyAyNTAuN2wtOTYgNTUuNWMtMi43IDEuNi02LjEuOC03LjctMS45LTEuNi0yLjctLjgtNi4xIDEuOS03LjdsODkuOS01MS41LTg5LjktNTEuNWMtMi43LTEuNi0zLjUtNS0xLjktNy43IDEuNi0yLjcgNS0zLjUgNy43LTEuOWw5NiA1NS41YzEuNi45IDIuNSAyLjQgMi41IDQuMXMtLjkgMy4yLTIuNSA0LjF6Ii8+PC9zdmc+" alt="VPN App Interface">
+            </div>
+            <div class="image-box">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODAgNDgwIiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMjQwIDQ4QzEzNS4xIDQ4IDQ4IDEzNS4xIDQ4IDI0MHM4Ny4xIDE5MiAxOTIgMTkyIDE5Mi04Ny4xIDE5Mi0xOTJTMzQ0LjkgNDggMjQwIDQ4em0zMiAyNjRjMCA0LjQtMy42IDgtOCA4aLTQ4Yy00LjQgMC04LTMuNi04LThWMTY4YzAtNC40IDMuNi04IDgtOGg0OGM0LjQgMCA4IDMuNiA4IDh2MTQ0eiIvPjwvc3ZnPg==" alt="VPN Server Locations">
+            </div>
+        </section>
+        
+        <section id="download" class="feature-box">
+            <h2 style="text-align: center; margin-bottom: 20px;"><i class="fas fa-download"></i> Download APK</h2>
+            <p style="text-align: center; margin-bottom: 20px;">Get the latest version of YT PLUS VIP VPN for Android</p>
+            <div style="text-align: center;">
+                <a href="#" class="btn">Download APK v2.4.1</a>
+            </div>
+        </section>
+        
+        <section class="feature-box" style="margin-top: 40px;">
+            <h2 style="text-align: center; margin-bottom: 20px;"><i class="fas fa-video"></i> How to Use</h2>
+            <p style="text-align: center;">Watch our tutorial video to learn how to set up and use YT PLUS VIP VPN</p>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-top: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0ODAgNDgwIiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMjQwIDQ4QzEzNS4xIDQ4IDQ4IDEzNS4xIDQ4IDI0MHM4Ny4xIDE5MiAxOTIgMTkyIDE5Mi04Ny4xIDE5Mi0xOTJTMzQ0LjkgNDggMjQwIDQ4em03Ni40IDI1Ni41bC0xNDQuMSA4My4yYy01LjUgMy4yLTEyLjQuOC0xNS42LTQuN2MtMS4xLTEuOS0xLjctNC4xLTEuNy02LjRWNTEuNGMwLTYuNiA1LjQtMTIgMTItMTJjMi4zIDAgNC41LjYgNi40IDEuN2wxNDQuMSA4My4yYzUuNSAzLjIgOC45IDkuMyA4LjkgMTUuN2MwIDYuNC0zLjQgMTIuNS04LjkgMTUuN3oiLz48L3N2Zz4=" alt="Video Tutorial" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                    <a href="#" style="background: rgba(0,0,0,0.7); color: white; padding: 15px 25px; border-radius: 50%; display: inline-block;">
+                        <i class="fas fa-play" style="font-size: 30px;"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="pricing">
+            <h2>VIP Subscription Plans</h2>
+            <div class="pricing-plans">
+                <div class="plan">
+                    <h3>1 Month</h3>
+                    <div class="price">$4.99</div>
+                    <ul>
+                        <li>Full Access to All Servers</li>
+                        <li>Unlimited Bandwidth</li>
+                        <li>24/7 Support</li>
+                        <li>No Ads</li>
+                    </ul>
+                    <a href="#" class="btn">Get Plan</a>
+                </div>
+                
+                <div class="plan">
+                    <h3>2 Months</h3>
+                    <div class="price">$8.99</div>
+                    <ul>
+                        <li>All 1-Month Features</li>
+                        <li>Priority Connection</li>
+                        <li>Faster Speeds</li>
+                        <li>Save 10%</li>
+                    </ul>
+                    <a href="#" class="btn">Get Plan</a>
+                </div>
+                
+                <div class="plan">
+                    <h3>3 Months</h3>
+                    <div class="price">$12.99</div>
+                    <ul>
+                        <li>All 2-Months Features</li>
+                        <li>Dedicated IP Option</li>
+                        <li>Simultaneous Connections</li>
+                        <li>Save 15%</li>
+                    </ul>
+                    <a href="#" class="btn">Get Plan</a>
+                </div>
+            </div>
+        </section>
+        
+        <div class="social-toggle">
+            <button class="toggle-btn" id="socialToggle">
+                <i class="fas fa-comments"></i>
+            </button>
+            <div class="social-links" id="socialLinks">
+                <a href="#" class="social-link telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="#" class="social-link messenger">
+                    <i class="fab fa-facebook-messenger"></i>
+                </a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2023 YT PLUS VIP VPN. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle social links
+        document.getElementById('socialToggle').addEventListener('click', function() {
+            document.getElementById('socialLinks').classList.toggle('active');
+        });
+        
+        // Set current year for copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('footer p').innerHTML = '&copy; ' + new Date().getFullYear() + ' YT PLUS VIP VPN. All rights reserved.';
+        });
+    </script>
+</body>
+</html>
